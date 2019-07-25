@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MiniITXStore
 {
-    enum PartType { Case, CLC, Motherboard, RAM, VideoCard, Fan, CaseAccessory, PSU, HSF};
+    enum PartTypes { Case, CLC, Motherboard, RAM, VideoCard, Fan, CaseAccessory, PSU, HSF};
     class Part
     {
         public string Name { get; set; }
@@ -16,6 +16,7 @@ namespace MiniITXStore
         public decimal Height { get; set; }
         public decimal Weight { get; set; }
         public string[] CaseCompatibilityList { get; set; }
+        public PartTypes PartType { get; set; }
         public int PartID { get; set; }
     }
 }
