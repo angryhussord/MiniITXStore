@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace MiniITXStore
@@ -23,7 +24,7 @@ namespace MiniITXStore
 
         public static IEnumerable<Part> GetAllPartsByName(string partName)
         {
-            return Parts;
+            return Parts.Where(a=> a.Name == partName);
         }
     }
 }
