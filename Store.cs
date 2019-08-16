@@ -24,7 +24,7 @@ namespace MiniITXStore
 
         public static IEnumerable<Part> GetAllPartsByName(string partName)
         {
-            return Parts.Where(a=> a.Name == partName);
+            return Parts.Where(a => a.Name.Contains(partName) == true);
         }
     }
 }

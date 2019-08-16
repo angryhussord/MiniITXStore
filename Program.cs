@@ -9,7 +9,7 @@ namespace MiniITXStore
     {
         static void Main(string[] args)
         {
-                        Console.WriteLine("Welcome to the MiniITX Part Store!");
+            Console.WriteLine("Welcome to the MiniITX Part Store!");
             while (true)
             {
                 Console.WriteLine("0. Exit");
@@ -41,11 +41,26 @@ namespace MiniITXStore
                     case "3":
                         break;
                     case "4":
+                        break;
+                    case "5":
+                        break;
+                    case "6":
+                        Console.Write("Search for a part (by name):");
+                        var myPartName = Console.ReadLine();
+                        Console.WriteLine($"Looking for part named: {myPartName}");
+                        var myParts = Store.GetAllPartsByName(myPartName);
+                        myParts.GetEnumerator().
+                        Console.WriteLine($"Found {myParts}");
                         Console.WriteLine("Printing parts list:");
-                        Console.WriteLine("Part Name: {myPart.Name}");
-                        Console.WriteLine("Part Description: {myPart.Description}");
-                        Console.WriteLine("Part Creation Date: {myPart.CreatedDate}");
-                        Console.WriteLine("Part ID: {myPart.PartID}");
+                        foreach (Part myPart in myParts)
+                        {
+                            Console.WriteLine("-----------");
+                            Console.WriteLine("Part Name: {myPart.Name}");
+                            Console.WriteLine("Part Description: {myPart.Description}");
+                            Console.WriteLine("Part Creation Date: {myPart.CreatedDate}");
+                            Console.WriteLine("Part ID: {myPart.PartID}");
+                            Console.WriteLine("-----------");
+                        }
                         break;
                     default:
                         break;
