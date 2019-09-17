@@ -38,6 +38,26 @@ namespace MiniITXStore
                         Store.CreatePart(partName, partDescription, PartTypes.Motherboard);
                         break;
                     case "2":
+                        Console.WriteLine("Change an existing part:");
+                        Console.WriteLine("What's the part name?");
+                        partName = Console.ReadLine();
+                        var myParts = Store.GetAllPartsByName(partName);
+                        int numPartsFound = ((ICollection<Part>)myParts).Count;
+                        switch(numPartsFound)
+                        {
+                            case "0":
+                                //didn't find any parts with that name, try again
+                                Console.WriteLine($"We found zero that match that query. Please try a different query term.");
+                                break;
+                            case "1":
+                                // found only a single part, continue to the editing of it
+                                
+                                break;
+                            default:
+                                //we found 2 or more parts, try again
+                                Console.WriteLine($"We found {numPartsFound} that match that query. Please try a more specific query.");
+                                break;
+                        }
                         break;
                     case "3":
                         break;
@@ -47,9 +67,9 @@ namespace MiniITXStore
                         break;
                     case "6":
                         Console.Write("Search for a part (by name):");
-                        var myPartName = Console.ReadLine();
-                        Console.WriteLine($"Looking for part named: {myPartName}");
-                        var myParts = Store.GetAllPartsByName(myPartName);
+                        partName = Console.ReadLine();
+                        Console.WriteLine($"Looking for part named: {partName}");
+                        myParts = Store.GetAllPartsByName(partName);
                         foreach (Part myPart in myParts)
                         {
                             Console.WriteLine($"-----------");
