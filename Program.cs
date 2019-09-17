@@ -67,11 +67,11 @@ namespace MiniITXStore
                         int numPartsFound = ((ICollection<Part>)myParts).Count;
                         switch(numPartsFound)
                         {
-                            case "0":
+                            case 0:
                                 //didn't find any parts with that name, try again
                                 Console.WriteLine($"We found zero that match that query. Please try a different query term.");
                                 break;
-                            case "1":
+                            case 1:
                                 // found only a single part, continue to the editing of it
                                 
                                 break;
