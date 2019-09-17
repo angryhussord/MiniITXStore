@@ -8,7 +8,7 @@ namespace MiniITXStore
     class Part
     {
         #region Properties
-        private int lastPartID = 0;
+        private static int lastPartID = 0;
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }

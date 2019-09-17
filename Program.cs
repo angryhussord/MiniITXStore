@@ -50,9 +50,6 @@ namespace MiniITXStore
                         var myPartName = Console.ReadLine();
                         Console.WriteLine($"Looking for part named: {myPartName}");
                         var myParts = Store.GetAllPartsByName(myPartName);
-
-                        
-                        Console.WriteLine("Printing parts list:");
                         foreach (Part myPart in myParts)
                         {
                             Console.WriteLine($"-----------");
