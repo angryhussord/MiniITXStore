@@ -18,7 +18,6 @@ namespace MiniITXStore
         public decimal Width { get; set; }
         public decimal Height { get; set; }
         public decimal Weight { get; set; }
-        public string[] CaseCompatibilityList { get; set; }
         public PartTypes PartType { get; set; }
         public int PartID { get; set; }
         public DateTime CreatedDate { get; }

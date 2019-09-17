@@ -11,13 +11,19 @@ namespace MiniITXStore
     {
         private static readonly List<Part> Parts = new List<Part>();
 
-        public static void CreatePart(string partName, string partDescription, PartTypes partType)
+        public static void CreatePart(string partName, string partDescription, PartTypes partType, decimal price, decimal cost, string manufacturer, decimal length, decimal width, decimal height)
         {
             var part = new Part
             {
                 Name = partName,
                 Description = partDescription,
-                PartType = partType
+                PartType = partType,
+                Price = price,
+                Cost = cost,
+                Manufacturer = manufacturer,
+                Length = length,
+                Width = width,
+                Height = height
             };
 
             Parts.Add(part);
