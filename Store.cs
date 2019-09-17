@@ -10,7 +10,7 @@ namespace MiniITXStore
     {
         private static readonly List<Part> Parts = new List<Part>();
 
-        public static Part CreatePart(string partName, string partDescription, PartTypes partType)
+        public static void CreatePart(string partName, string partDescription, PartTypes partType)
         {
             var part = new Part
             {
@@ -19,12 +19,12 @@ namespace MiniITXStore
                 PartType = partType
             };
 
-            return part;
+            Parts.Add(part);
         }
 
         public static IEnumerable<Part> GetAllPartsByName(string partName)
         {
-            return Parts.Where(a => a.Name.Contains(partName) == true);
+            return Parts.Where(a => a.Name.Contains(partName));
         }
     }
 }

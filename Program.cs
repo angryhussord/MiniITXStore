@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Xsl;
 
 namespace MiniITXStore
 {
@@ -33,7 +34,7 @@ namespace MiniITXStore
                         var partName = Console.ReadLine();
                         Console.WriteLine("Description:");
                         var partDescription = Console.ReadLine();
-                        
+
                         Store.CreatePart(partName, partDescription, PartTypes.Motherboard);
                         break;
                     case "2":
@@ -49,17 +50,17 @@ namespace MiniITXStore
                         var myPartName = Console.ReadLine();
                         Console.WriteLine($"Looking for part named: {myPartName}");
                         var myParts = Store.GetAllPartsByName(myPartName);
-                        myParts.GetEnumerator().
-                        Console.WriteLine($"Found {myParts}");
+
+                        
                         Console.WriteLine("Printing parts list:");
                         foreach (Part myPart in myParts)
                         {
-                            Console.WriteLine("-----------");
-                            Console.WriteLine("Part Name: {myPart.Name}");
-                            Console.WriteLine("Part Description: {myPart.Description}");
-                            Console.WriteLine("Part Creation Date: {myPart.CreatedDate}");
-                            Console.WriteLine("Part ID: {myPart.PartID}");
-                            Console.WriteLine("-----------");
+                            Console.WriteLine($"-----------");
+                            Console.WriteLine($"Part Name: {myPart.Name}");
+                            Console.WriteLine($"Part Description: {myPart.Description}");
+                            Console.WriteLine($"Part Creation Date: {myPart.CreatedDate}");
+                            Console.WriteLine($"Part ID: {myPart.PartID}");
+                            Console.WriteLine($"-----------");
                         }
                         break;
                     default:
