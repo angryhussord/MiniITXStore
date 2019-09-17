@@ -55,7 +55,9 @@ namespace MiniITXStore
                         decimal partWidth = Convert.ToDecimal(Console.ReadLine());
                         Console.WriteLine("What's the part height (in mm)?");
                         decimal partHeight = Convert.ToDecimal(Console.ReadLine());
-                        Store.CreatePart(partName, partDescription, (PartTypes)partType, partPrice, partCost, partManufacturer, partLength, partWidth, partHeight);
+                        Console.WriteLine("What's the part weight (in kg)?");
+                        decimal partWeight = Convert.ToDecimal(Console.ReadLine());
+                        Store.CreatePart(partName, partDescription, (PartTypes)partType, partPrice, partCost, partManufacturer, partLength, partWidth, partHeight, partWeight);
                         break;
                     case "2":
                         Console.WriteLine("Change an existing part:");
@@ -104,6 +106,7 @@ namespace MiniITXStore
                             Console.WriteLine($"Part Length: {myPart.Length}");
                             Console.WriteLine($"Part Width: {myPart.Width}");
                             Console.WriteLine($"Part Height: {myPart.Height}");
+                            Console.WriteLine($"Part Weight: {myPart.Weight}");
                             Console.WriteLine($"-----------");
                         }
                         break;

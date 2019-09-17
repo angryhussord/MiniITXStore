@@ -11,7 +11,7 @@ namespace MiniITXStore
     {
         private static readonly List<Part> Parts = new List<Part>();
 
-        public static void CreatePart(string partName, string partDescription, PartTypes partType, decimal price, decimal cost, string manufacturer, decimal length, decimal width, decimal height)
+        public static void CreatePart(string partName, string partDescription, PartTypes partType, decimal price, decimal cost, string manufacturer, decimal length, decimal width, decimal height, decimal weight)
         {
             var part = new Part
             {
@@ -23,7 +23,8 @@ namespace MiniITXStore
                 Manufacturer = manufacturer,
                 Length = length,
                 Width = width,
-                Height = height
+                Height = height,
+                Weight = weight
             };
 
             Parts.Add(part);
