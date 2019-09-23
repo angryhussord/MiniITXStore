@@ -30,12 +30,21 @@ namespace MiniITXStore
             Parts.Add(part);
         }
 
-        public static void UpdatePart(Part part)
-        { }
+        public static void DeletePart(int partId)
+        {
+            Part partToRemove = GetPartById(partId);
+            Parts.Remove(partToRemove);
+            return;
+        }
 
         public static IEnumerable<Part> GetAllPartsByName(string partName)
         {
             return Parts.Where(a => a.Name.Contains(partName));
+        }
+
+        public static Part GetPartById(int id)
+        {
+            return Parts.SingleOrDefault(a => a.PartID == id);
         }
     }
 }

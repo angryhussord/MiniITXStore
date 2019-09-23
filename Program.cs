@@ -59,12 +59,14 @@ namespace MiniITXStore
                         decimal partWeight = Convert.ToDecimal(Console.ReadLine());
                         Store.CreatePart(partName, partDescription, (PartTypes)partType, partPrice, partCost, partManufacturer, partLength, partWidth, partHeight, partWeight);
                         break;
-                    case "2: //delete a part
+                    case "2": //delete a part
                         //ask for a name
                         //find the part
                         //if it's the only one returned, delete it
                         //otherwise, part not found exception?
-
+                        Console.Write("Search for a part (by partID):");
+                        int partId = Convert.ToInt32(Console.ReadLine());
+                        Store.DeletePart(partId);
                         break;
                     case "3": //add a part to the cart
                         break;
@@ -76,7 +78,7 @@ namespace MiniITXStore
                         Console.Write("Search for a part (by name):");
                         partName = Console.ReadLine();
                         Console.WriteLine($"Looking for part named: {partName}");
-                        myParts = Store.GetAllPartsByName(partName);
+                        var myParts = Store.GetAllPartsByName(partName);
                         foreach (Part myPart in myParts)
                         {
                             Console.WriteLine($"-----------");
