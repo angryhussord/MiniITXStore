@@ -15,20 +15,20 @@ namespace MiniITXStore
             {
                 Console.WriteLine("0. Exit");
                 Console.WriteLine("1. Create a new part");
-                Console.WriteLine("2. Change an existing part");
-                Console.WriteLine("3. Delete a part");
-                Console.WriteLine("4. Add a part to the cart");
-                Console.WriteLine("5. Remove a part from the cart");
+                Console.WriteLine("2. Delete a part");
+                Console.WriteLine("3. Add a part to the cart");
+                Console.WriteLine("4. Remove a part from the cart");
+                Console.WriteLine("5. Display Cart and Total");
                 Console.WriteLine("6. Print all parts");
 
                 Console.Write("Select an option: ");
                 var choice = Console.ReadLine();
                 switch (choice)
                 {
-                    case "0":
+                    case "0": //exit
                         Console.WriteLine("Thank you for visiting the Mini ITX Parts Store!");
                         return;
-                    case "1":
+                    case "1": //create a part
                         Console.WriteLine("Create a new part:");
                         Console.WriteLine("What's the part name?");
                         var partName = Console.ReadLine();
@@ -59,33 +59,18 @@ namespace MiniITXStore
                         decimal partWeight = Convert.ToDecimal(Console.ReadLine());
                         Store.CreatePart(partName, partDescription, (PartTypes)partType, partPrice, partCost, partManufacturer, partLength, partWidth, partHeight, partWeight);
                         break;
-                    case "2":
-                        Console.WriteLine("Change an existing part:");
-                        Console.WriteLine("What's the part name?");
-                        partName = Console.ReadLine();
-                        var myParts = Store.GetAllPartsByName(partName);
-                        int numPartsFound = ((ICollection<Part>)myParts).Count;
-                        switch(numPartsFound)
-                        {
-                            case 0:
-                                //didn't find any parts with that name, try again
-                                Console.WriteLine($"We found zero that match that query. Please try a different query term.");
-                                break;
-                            case 1:
-                                // found only a single part, continue to the editing of it
-                                
-                                break;
-                            default:
-                                //we found 2 or more parts, try again
-                                Console.WriteLine($"We found {numPartsFound} that match that query. Please try a more specific query.");
-                                break;
-                        }
+                    case "2: //delete a part
+                        //ask for a name
+                        //find the part
+                        //if it's the only one returned, delete it
+                        //otherwise, part not found exception?
+
                         break;
-                    case "3":
+                    case "3": //add a part to the cart
                         break;
-                    case "4":
+                    case "4": //remove a part from the cart
                         break;
-                    case "5":
+                    case "5": //display cart and total
                         break;
                     case "6":
                         Console.Write("Search for a part (by name):");

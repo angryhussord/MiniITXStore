@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pahuff\\source\\repos\\MiniITXStore\\MiniITXStore.csproj": {}
+    "C:\\Users\\pahuff\\Source\\Repos\\MiniITXStore\\MiniITXStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pahuff\\source\\repos\\MiniITXStore\\MiniITXStore.csproj": {
+    "C:\\Users\\pahuff\\Source\\Repos\\MiniITXStore\\MiniITXStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pahuff\\source\\repos\\MiniITXStore\\MiniITXStore.csproj",
+        "projectUniqueName": "C:\\Users\\pahuff\\Source\\Repos\\MiniITXStore\\MiniITXStore.csproj",
         "projectName": "MiniITXStore",
-        "projectPath": "C:\\Users\\pahuff\\source\\repos\\MiniITXStore\\MiniITXStore.csproj",
+        "projectPath": "C:\\Users\\pahuff\\Source\\Repos\\MiniITXStore\\MiniITXStore.csproj",
         "packagesPath": "C:\\Users\\pahuff\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pahuff\\source\\repos\\MiniITXStore\\obj\\",
+        "outputPath": "C:\\Users\\pahuff\\Source\\Repos\\MiniITXStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
