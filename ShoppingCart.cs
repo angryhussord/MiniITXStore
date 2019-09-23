@@ -16,5 +16,10 @@ namespace MiniITXStore
         {
             PartList.Add(partToAdd);
         }
+
+        public void RemovePartFromCart(Part partToRemove)
+        {
+            PartList.Remove(partToRemove);
+        }
     }
 }

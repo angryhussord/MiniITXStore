@@ -74,6 +74,9 @@ namespace MiniITXStore
                         Store.AddPartToCart(partId);
                         break;
                     case "4": //remove a part from the cart
+                        Console.WriteLine($"What is the ID of the part you wish to remove from the cart? ");
+                        partId = Convert.ToInt32(Console.ReadLine());
+                        Store.RemovePartFromCart(partId);
                         break;
                     case "5": //display cart and total
                         break;

@@ -53,5 +53,11 @@ namespace MiniITXStore
             var partToAdd = Store.GetPartById(partId);
             Cart.AddPartToCart(partToAdd);
         }
+
+        public static void RemovePartFromCart(int partId)
+        {
+            var partToRemove = Store.GetPartById(partId);
+            Cart.RemovePartFromCart(partToRemove);
+        }
     }
 }
