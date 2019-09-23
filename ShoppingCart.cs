@@ -7,10 +7,14 @@ namespace MiniITXStore
 {
     class ShoppingCart
     {
-        public Part[] PartList { get; set; }
+        private readonly List<Part> PartList = new List<Part>();
         public decimal TotalPrice { get; set; }
         public int SessionID { set; get; }
         public Customer CustomerID { get; set; }
-        public Part[] ItemSuggestions { get; set; }
+
+        public void AddPartToCart(Part partToAdd)
+        {
+            PartList.Add(partToAdd);
+        }
     }
 }

@@ -10,6 +10,7 @@ namespace MiniITXStore
     static class Store
     {
         private static readonly List<Part> Parts = new List<Part>();
+        private static ShoppingCart Cart;
 
         public static void CreatePart(string partName, string partDescription, PartTypes partType, decimal price, decimal cost, string manufacturer, decimal length, decimal width, decimal height, decimal weight)
         {
@@ -45,6 +46,12 @@ namespace MiniITXStore
         public static Part GetPartById(int id)
         {
             return Parts.SingleOrDefault(a => a.PartID == id);
+        }
+
+        public static void AddPartToCart(int partId)
+        {
+            var partToAdd = Store.GetPartById(partId);
+            Cart.AddPartToCart(partToAdd);
         }
     }
 }

@@ -9,10 +9,7 @@ namespace MiniITXStore
         #region Properties
         public string Name { get; set; }
         public static int CustomerID { get; set; }
-        public Transaction[] TransactionList { get; set; }
         #endregion
-
-
         #region Methods
         #endregion
 
