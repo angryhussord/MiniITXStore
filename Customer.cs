@@ -7,8 +7,13 @@ namespace MiniITXStore
     class Customer
     {
         #region Properties
-        public string Name { get; set; }
-        public static int CustomerID { get; set; }
+        public int CustomerID { get; set; }
+        public string CustomerFirstName { get; set; }
+        public string CustomerLastName { get; set; }
+        public Address ShippingAddress = new Address();
+        public Address BillingAddress = new Address();
+        public string Email;
+        public string PhoneNumber;
         #endregion
         #region Methods
         #endregion
